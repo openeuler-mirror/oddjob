@@ -1,6 +1,6 @@
 Name:    oddjob
 Version: 0.34.4
-Release: 7 
+Release: 8
 URL:     https://pagure.io/oddjob
 Source0: https://releases.pagure.org/oddjob/oddjob-%{version}.tar.gz
 Source1: https://releases.pagure.org/oddjob/oddjob-%{version}.tar.gz.sig
@@ -51,6 +51,9 @@ chmod -x src/reload src/mkhomedirfor src/mkmyhomedir
 
 touch -r src/oddjobd-mkhomedir.conf.in  %{buildroot}/%{_sysconfdir}/oddjobd.conf.d/oddjobd-mkhomedir.conf
 touch -r src/oddjob-mkhomedir.conf.in   %{buildroot}/%{_sysconfdir}/dbus-1/system.d/oddjob-mkhomedir.conf
+
+%check
+make check
 
 %post
 if test $1 -eq 1 ; then
@@ -103,5 +106,8 @@ exit 0
 %{_mandir}/*/*
 
 %changelog
+* Fri Feb 14 2020 openEuler Buildteam <buildteam@openeuler.org> - 0.34.4-8
+- Enable check
+
 * Tue Sep 17 2019 openEuler Buildteam <buildteam@openeuler.org> - 0.34.4-7
 - Package init
