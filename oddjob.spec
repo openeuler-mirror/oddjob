@@ -1,9 +1,8 @@
 Name:    oddjob
 Version: 0.34.4
-Release: 8
+Release: 9
 URL:     https://pagure.io/oddjob
 Source0: https://releases.pagure.org/oddjob/oddjob-%{version}.tar.gz
-Source1: https://releases.pagure.org/oddjob/oddjob-%{version}.tar.gz.sig
 Summary: A D-Bus service which runs odd jobs on behalf of client applications
 License: BSD
 BuildRequires:   gcc dbus-devel >= 0.22, dbus-x11, libselinux-devel, libxml2-devel docbook-dtds, xmlto
@@ -67,9 +66,6 @@ fi
 if test $1 -eq 1 ; then
         killall -HUP dbus-daemon 2>&1 > /dev/null
 fi
-if [ -f /var/lock/subsys/oddjobd ] ; then
-        /usr/bin/dbus-send --system --dest=com.redhat.oddjob /com/redhat/oddjob com.redhat.oddjob.reload
-fi
 exit 0
 
 %postun
@@ -106,6 +102,9 @@ exit 0
 %{_mandir}/*/*
 
 %changelog
+* Wed Apr 8 2020 openEuler Buildteam <buildteam@openeuler.org> - 0.34.4-9
+- Delete redundant scripts and file
+
 * Fri Feb 14 2020 openEuler Buildteam <buildteam@openeuler.org> - 0.34.4-8
 - Enable check
 
