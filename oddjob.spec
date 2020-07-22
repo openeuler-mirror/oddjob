@@ -1,6 +1,6 @@
 Name:    oddjob
-Version: 0.34.4
-Release: 9
+Version: 0.34.6
+Release: 1
 URL:     https://pagure.io/oddjob
 Source0: https://releases.pagure.org/oddjob/oddjob-%{version}.tar.gz
 Summary: A D-Bus service which runs odd jobs on behalf of client applications
@@ -102,6 +102,9 @@ exit 0
 %{_mandir}/*/*
 
 %changelog
+* Wed Jul 22 2020 shixuantong <shixuantong@huawei.com> - 0.34.6-1
+- update to 0.34.6-1
+
 * Wed Apr 8 2020 openEuler Buildteam <buildteam@openeuler.org> - 0.34.4-9
 - Delete redundant scripts and file
 
