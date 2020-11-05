@@ -1,12 +1,12 @@
 Name:    oddjob
 Version: 0.34.6
-Release: 1
+Release: 2
 URL:     https://pagure.io/oddjob
 Source0: https://releases.pagure.org/oddjob/oddjob-%{version}.tar.gz
 Summary: A D-Bus service which runs odd jobs on behalf of client applications
 License: BSD
 BuildRequires:   gcc dbus-devel >= 0.22, dbus-x11, libselinux-devel, libxml2-devel docbook-dtds, xmlto
-BuildRequires:   pam-devel, python2-devel, pkgconfig cyrus-sasl-devel, krb5-devel, openldap-devel
+BuildRequires:   pam-devel, python3-devel, pkgconfig cyrus-sasl-devel, krb5-devel, openldap-devel
 BuildRequires:   systemd-units
 Requires(post):  systemd-units
 Requires(preun): systemd-units
@@ -102,6 +102,9 @@ exit 0
 %{_mandir}/*/*
 
 %changelog
+* Fri Oct 30 2020 shixuantong <shixuantong@huawei.com> - 0.34.6-2
+- remove python2
+
 * Wed Jul 22 2020 shixuantong <shixuantong@huawei.com> - 0.34.6-1
 - update to 0.34.6-1
 
