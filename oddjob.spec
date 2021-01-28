@@ -1,6 +1,6 @@
 Name:    oddjob
-Version: 0.34.6
-Release: 2
+Version: 0.34.7
+Release: 1
 URL:     https://pagure.io/oddjob
 Source0: https://releases.pagure.org/oddjob/oddjob-%{version}.tar.gz
 Summary: A D-Bus service which runs odd jobs on behalf of client applications
@@ -102,8 +102,8 @@ exit 0
 %{_mandir}/*/*
 
 %changelog
-* Fri Oct 30 2020 shixuantong <shixuantong@huawei.com> - 0.34.6-2
-- remove python2
+* Thu Jan 28 2021 yuanxin <yuanxin24@huawei.com> - 0.34.7-1
+- upgread version to 0.34.7
 
 * Wed Jul 22 2020 shixuantong <shixuantong@huawei.com> - 0.34.6-1
 - update to 0.34.6-1
