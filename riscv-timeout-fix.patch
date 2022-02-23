@@ -1,0 +1,11 @@
+--- a/tests/018/pre.sh
++++ b/tests/018/pre.sh
+@@ -4,7 +4,7 @@
+ #  2^24 or so.
+ #
+ i=0
+-stopat=`expr 1024 '*' 1024`
++stopat=`expr 128 '*' 128`
+ regen=false
+ outfile=expected_stdout
+ if ! test -s $outfile ; then
