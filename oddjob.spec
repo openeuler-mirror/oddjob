@@ -3,7 +3,9 @@ Version: 0.34.7
 Release: 2
 URL:     https://pagure.io/oddjob
 Source0: https://releases.pagure.org/oddjob/oddjob-%{version}.tar.gz
+%ifarch riscv64
 Patch0:  riscv-timeout-fix.patch
+%endif
 Summary: A D-Bus service which runs odd jobs on behalf of client applications
 License: BSD
 BuildRequires:   gcc dbus-devel >= 0.22, dbus-x11, libselinux-devel, libxml2-devel docbook-dtds, xmlto
