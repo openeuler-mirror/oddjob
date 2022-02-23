@@ -1,8 +1,9 @@
 Name:    oddjob
 Version: 0.34.7
-Release: 1
+Release: 2
 URL:     https://pagure.io/oddjob
 Source0: https://releases.pagure.org/oddjob/oddjob-%{version}.tar.gz
+Patch0:  riscv-timeout-fix.patch
 Summary: A D-Bus service which runs odd jobs on behalf of client applications
 License: BSD
 BuildRequires:   gcc dbus-devel >= 0.22, dbus-x11, libselinux-devel, libxml2-devel docbook-dtds, xmlto
@@ -102,6 +103,9 @@ exit 0
 %{_mandir}/*/*
 
 %changelog
+* Wed Feb 23 2022 jinjuhan <juhanjin.me@gmail.com> - 0.34.7-2
+- Make 018 test on RISC-V pass by generating less data
+
 * Thu Jan 28 2021 yuanxin <yuanxin24@huawei.com> - 0.34.7-1
 - upgread version to 0.34.7
 

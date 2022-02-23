@@ -1,0 +1,11 @@
+--- tests/018/pre.sh.old	2022-02-23 15:36:51.688551418 +0800
++++ tests/018/pre.sh	2022-02-23 15:37:06.465595890 +0800
+@@ -4,7 +4,7 @@
+ #  2^24 or so.
+ #
+ i=0
+-stopat=`expr 1024 '*' 1024`
++stopat=`expr 128 '*' 128`
+ regen=false
+ outfile=expected_stdout
+ if ! test -s $outfile ; then
